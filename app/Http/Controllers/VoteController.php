@@ -43,4 +43,9 @@ class VoteController extends Controller
         $vote->save();
         return back();
     }
+
+    public function delete($id) {
+        $vote = Vote::destroy($id);
+        return back();
+    }
 }

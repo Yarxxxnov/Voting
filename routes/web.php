@@ -26,3 +26,5 @@ Route::get('/vote/show/{id}', '\App\Http\Controllers\VoteController@show');
 Route::get('/vote/positive_inc/{id}', '\App\Http\Controllers\VoteController@increasePositive');
 
 Route::get('/vote/negative_inc/{id}', '\App\Http\Controllers\VoteController@increaseNegative');
+
+Route::get('/vote/delete/{id}', '\App\Http\Controllers\VoteController@delete');

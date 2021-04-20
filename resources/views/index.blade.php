@@ -40,11 +40,14 @@
                 <div class="card border-info mb-4">
                     <!-- НАЧАЛО: Шапка карточки -->
                     <div class="card-header border-info">
-                        <h5 class="card-title mb-0">
+                        <h5 class="card-title mb-0" style="display: inline-block">
                             <a href="/vote/show/{{$vote['id']}}">
                                 {{$vote['title']}}
                             </a>
                         </h5>
+                        <a href="/vote/delete/{{$vote['id']}}" class="btn btn-outline-danger mr-3" style="float: right">
+                            <i aria-hidden="true"> Удалить голосование </i>
+                        </a>
                     </div>
                     <!-- КОНЕЦ: Шапка карточки -->
                     <!-- НАЧАЛО: Тело карточки -->
@@ -55,13 +58,13 @@
                         </p>
                         <!-- Кнопки голосования -->
                         <a href="/vote/positive_inc/{{$vote['id']}}" class="btn btn-outline-success mr-3">
-                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Я за!
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"> Я за! </i>
                             <span class="badge badge-pill badge-success">
                                 {{$vote['positive']}}
                             </span>
                         </a>
                         <a href="/vote/negative_inc/{{$vote['id']}}" class="btn btn-outline-danger mr-3">
-                            <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Я против!
+                            <i class="fa fa-thumbs-o-down" aria-hidden="true"> Я против! </i>
                             <span class="badge badge-pill badge-danger">
                                 {{$vote['negative']}}
                             </span>
