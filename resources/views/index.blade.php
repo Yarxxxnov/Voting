@@ -35,6 +35,7 @@
 			<h1>Текущие голосования</h1>
 			<hr class="mb-5">
 
+            <div style="min-height: 68vh">
             @foreach($votes as $vote)
                 <!-- НАЧАЛО: Карточка голосования ------------------------------------->
                 <div class="card border-info mb-4">
@@ -74,6 +75,20 @@
                 </div>
                 <!-- КОНЕЦ: Карточка голосования -------------------------------------->
             @endforeach
+            </div>
+            <div style="display: flex">
+                <div class = "page-item">
+                    <a class = "page-link" href="/?page=1">
+                        <span>&laquo;</span>
+                    </a>
+                </div>
+                {{$votes->links()}}
+                <div class = "page-item">
+                    <a class = "page-link" href="/?page={{$votes->lastPage()}}">
+                        <span>&raquo;</span>
+                    </a>
+                </div>
+            </div>
 
 		</div>
 	</main>

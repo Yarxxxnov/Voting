@@ -19,7 +19,7 @@ class VoteController extends Controller
     }
 
     public function showAll() {
-        $votes = Vote::all();
+        $votes = Vote::paginate(3);
 
         return view('index', ['votes' => $votes]);
     }
